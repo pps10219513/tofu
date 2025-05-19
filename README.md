@@ -13,15 +13,12 @@ La **Infraestructura como Código (IaC)** permite definir y gestionar entornos d
 ## Objetivos
 
 - **RA5**: Implantar sistemas seguros de despliegue de software, utilizando herramientas de automatización.  
-- **3.1** Provisionar una VM Ubuntu 24.04.
+- **3.1** [Provisionar una VM Ubuntu 24.04.](./main.tf)
 | ![provision](./images/1.png) |
-| ---------------------------- |
   
-- **3.2** Configurar el sistema: `update & upgrade` + instalación de Apache.
+- **3.2** [Configurar el sistema: `update & upgrade` + instalación de Apache.](./deploy.yml)
 | ![apt update y install apache](./images/2.png)|
-| ---------------------------- |
 
 
-- **3.3** Desplegar contenido web (`index.html`) y verificar su acceso. :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}
+- **3.3** [Desplegar contenido web (`index.html`) y verificar su acceso.](./web/)
 | ![apache funcionant](./images/3.png)|
-| ---------------------------- |
