@@ -1,0 +1,2 @@
+[webserver]
+qemu_vm ansible_host=debian ansible_user=debian ansible_ssh_private_key_file=./keys/debian/id_ed25519

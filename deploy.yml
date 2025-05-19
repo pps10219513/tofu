@@ -1,0 +1,29 @@
+---
+- name: Deploy Apache and Website
+  hosts: webserver
+  become: true
+
+  tasks:
+    - name: Update apt repository and cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Copy web directory to the server
+      copy:
+        src: ./web/
+        dest: /var/www/html/
+        owner: www-data
+        group: www-data
+        mode: '0755'
+
+    - name: Enable and start Apache
+      systemd:
+        name: apache2
+        enabled: true
+        state: started
+
